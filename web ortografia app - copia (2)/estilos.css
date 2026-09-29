@@ -1,0 +1,574 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172f62;
+    background: white;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    font-size: 17px;
+    color: #333;
+    min-width: 160px;
+}
+
+.logo strong {
+    margin-left: 4px;
+}
+
+.logo small {
+    display: block;
+    font-size: 8px;
+    color: #888;
+    margin-left: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #333;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1769e0;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-jugar,
+.btn-principal {
+    background: #1769e0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-jugar:hover,
+.btn-principal:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 520px;
+    padding: 70px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.etiqueta {
+    color: #e2a84a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.1;
+    margin: 18px 0;
+    color: #12336d;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #666;
+    font-size: 15px;
+}
+
+.botones {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.seguro {
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* =========================
+   IMAGEN DEL JUEGO
+========================= */
+
+.hero-imagen {
+    width: 45%;
+}
+
+.juego-preview {
+    width: 100%;
+    height: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #eef1f6;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.juego-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 75px 5%;
+    text-align: center;
+}
+
+.gris {
+    background: #f4f6fa;
+}
+
+.subtitulo {
+    color: #2874d8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.seccion h2 {
+    font-size: 34px;
+    color: #12336d;
+    margin-top: 5px;
+}
+
+.seccion h3 {
+    font-size: 23px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    max-width: 850px;
+    margin: 15px auto 35px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.icono {
+    width: 35px;
+    height: 35px;
+    background: #f0f5fc;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.tarjeta h4 {
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: #666;
+    font-size: 12px;
+}
+
+
+/* =========================
+   PALABRAS
+========================= */
+
+.palabras {
+    max-width: 1150px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.palabra {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.palabra.destacada {
+    border: 2px solid #54a878;
+}
+
+.imagen-palabra {
+    height: 130px;
+    border-radius: 8px;
+    background: #dceefa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.tipo {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    display: inline-block;
+}
+
+.aguda {
+    background: #e9f1fc;
+    color: #2769b7;
+}
+
+.grave {
+    background: #e6f5ec;
+    color: #268151;
+}
+
+.palabra small {
+    float: right;
+    color: #999;
+    font-size: 9px;
+}
+
+.palabra h4 {
+    clear: both;
+    font-size: 25px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.palabra p {
+    font-size: 11px;
+    color: #666;
+}
+
+
+/* =========================
+   MECÁNICAS
+========================= */
+
+#mecanicas {
+    text-align: left;
+}
+
+#mecanicas h2 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mecanicas > p {
+    max-width: 1100px;
+    margin: 10px auto 30px;
+    color: #666;
+    font-size: 13px;
+}
+
+.mecanicas {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mecanica {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.mecanica > span {
+    min-width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2874d8;
+    color: white;
+    font-size: 12px;
+}
+
+.mecanica strong {
+    color: #333;
+    font-size: 13px;
+}
+
+.mecanica p {
+    color: #666;
+    font-size: 11px;
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios {
+    padding: 90px 20px;
+    text-align: center;
+    background: white;
+}
+
+.beneficios h2 {
+    color: #12336d;
+    font-size: 35px;
+}
+
+.beneficios p {
+    color: #666;
+    margin: 10px 0 25px;
+}
+
+
+/* =========================
+   ZONA COMENZAR AVENTURA
+========================= */
+
+.zona-juego {
+    max-width: 850px;
+    margin: 70px auto 0;
+    padding: 40px 20px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.zona-juego h3 {
+    color: #12336d;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.zona-juego p {
+    color: #666;
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.zona-juego .btn-principal {
+    margin-top: 30px;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background: #102b5c;
+    color: white;
+    padding: 45px 5%;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 22px;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #cbd5e5;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET / CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .btn-jugar {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .hero-text,
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-imagen {
+        margin-top: 20px;
+    }
+
+    .juego-preview {
+        height: 280px;
+    }
+
+    .juego-preview img {
+        object-fit: cover;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .palabras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zona-juego {
+        margin-top: 50px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 500px) {
+
+    .palabras {
+        grid-template-columns: 1fr;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seccion h2 {
+        font-size: 28px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .juego-preview {
+        height: auto;
+        min-height: 220px;
+    }
+
+    .juego-preview img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .zona-juego {
+        padding: 30px 15px;
+    }
+
+    .zona-juego h3 {
+        font-size: 21px;
+    }
+
+    .zona-juego .btn-principal {
+        margin-top: 25px;
+    }
+}
